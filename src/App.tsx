@@ -27,6 +27,13 @@ export default function App()
         blur: 1,
         left: 1,
         top: 1
+      },
+      events: { 
+        xAxisLabelClick: function(event:any, chartContext:any, config:any) {
+          /*xAxisLabelClick is buggy and there's an open issue on GitHub!!
+            Need to find another workaround...*/
+          console.log("Clicked on ", chartContext)
+        }
       }
     },
     colors: ['#F44336', '#E91E63', '#9C27B0'],//colors of series
@@ -120,7 +127,7 @@ export default function App()
         colors: '#a8a8a8',
         useSeriesColors: false
       },
-    }
+    },
   };
 
   const initialData: any = {
